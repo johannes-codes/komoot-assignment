@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isTracking = false
+    @State private var photos: [String] = []
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+            Button(isTracking ? "Stop" : "Start", action: startStopTracking)
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .trailing)
 
-#Preview {
-    ContentView()
+            ScrollView(showsIndicators: false) {
+
+                ForEach(photos, id: \.self) { imageUrl in
+
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.horizontal, 16)
+        }
+    }
+
+    private func startStopTracking() {
+        switch isTracking {
+        case true: break
+            // End Tracking
+        case false: break
+            // Start Tracking
+        }
+
+        isTracking.toggle()
+    }
 }
