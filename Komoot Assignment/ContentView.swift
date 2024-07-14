@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isTracking = false
     @State private var photos: [String] = []
-    private var locationManager: LocationManagerProtocol = LocationManager()
+    @ObservedObject private var coordinator = Coordinator()
 
     var body: some View {
         VStack {
@@ -19,25 +19,28 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
 
             ScrollView(showsIndicators: false) {
-
-                ForEach(photos, id: \.self) { imageUrl in
-
+                ForEach(coordinator.photoStream, id: \.self) { imageUrl in
+                    Text(imageUrl)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 200)
+                        .background(.gray)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 16)
         }
         .onAppear {
-            locationManager.requestLocationAccess()
+            coordinator.requestLocationAccess()
         }
     }
 
     private func startStopTracking() {
         switch isTracking {
         case true:
-            locationManager.stopTracking()
+            coordinator.stopWaling()
         case false:
-            locationManager.startTracking()
+            coordinator.startWalking()
         }
 
         isTracking.toggle()

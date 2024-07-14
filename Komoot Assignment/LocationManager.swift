@@ -32,7 +32,7 @@ final class LocationManager: NSObject, LocationManagerProtocol {
         self.locationManager = locationManager
 
         super.init()
-        locationManager.delegate = self
+        self.locationManager.delegate = self
     }
 
     func startTracking() {
@@ -56,9 +56,20 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let newLocation = locations.last else { return }
 
-        lastLocation = newLocation
-        print(newLocation.coordinate)
+        if let lastLocation = lastLocation {
+            let distance = newLocation.distance(from: lastLocation)
+            if distance >= 100 {
+                delegate?.didUpdateLocation(newLocation)
+                self.lastLocation = newLocation
+            }
+        } else {
+            lastLocation = newLocation
+        }
 
-        // TODO: Logic for calculating distance between coordinates
+        print(newLocation.coordinate)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
+        print(error)
     }
 }
