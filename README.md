@@ -14,3 +14,6 @@ with the location request, the networking going wrong, or maybe not finding any 
 # #2 Project Setup and inital design
 The project and app should not provide many options when it comes to the device it can run on and the orientations, 
 which is why I disabled them from the beginning. For the first draft of the design, I chose a simple ScrollView to hold static images.
+
+# #3 Introduce Location Manager
+The location manager holds the reference to the CLLocationManager and handles the beginning and end of tracking, as well as location access and state. The next step will be to calculate the distance between the updated locations and to send an event to the delegate once the threshold of 100 meters is passed.

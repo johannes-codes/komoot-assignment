@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isTracking = false
     @State private var photos: [String] = []
+    private var locationManager: LocationManagerProtocol = LocationManager()
 
     var body: some View {
         VStack {
@@ -26,14 +27,17 @@ struct ContentView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 16)
         }
+        .onAppear {
+            locationManager.requestLocationAccess()
+        }
     }
 
     private func startStopTracking() {
         switch isTracking {
-        case true: break
-            // End Tracking
-        case false: break
-            // Start Tracking
+        case true:
+            locationManager.stopTracking()
+        case false:
+            locationManager.startTracking()
         }
 
         isTracking.toggle()

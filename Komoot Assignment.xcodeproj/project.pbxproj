@@ -14,6 +14,7 @@
 		B4E20EC02C43EEDF00A8FC68 /* Komoot_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EBF2C43EEDF00A8FC68 /* Komoot_AssignmentTests.swift */; };
 		B4E20ECA2C43EEDF00A8FC68 /* Komoot_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EC92C43EEDF00A8FC68 /* Komoot_AssignmentUITests.swift */; };
 		B4E20ECC2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20ECB2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift */; };
+		B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		B4E20EC52C43EEDF00A8FC68 /* Komoot AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Komoot AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E20EC92C43EEDF00A8FC68 /* Komoot_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Komoot_AssignmentUITests.swift; sourceTree = "<group>"; };
 		B4E20ECB2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Komoot_AssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */,
 				B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */,
+				B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */,
 				B4E20EB22C43EEDE00A8FC68 /* Assets.xcassets */,
 				B4E20EB42C43EEDE00A8FC68 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				B4E20EB12C43EEDC00A8FC68 /* ContentView.swift in Sources */,
 				B4E20EAF2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift in Sources */,
+				B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +429,8 @@
 				DEVELOPMENT_TEAM = FJ872ZVMR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please grant access to your permanent location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please grant access to your permanent location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +464,8 @@
 				DEVELOPMENT_TEAM = FJ872ZVMR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please grant access to your permanent location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please grant access to your permanent location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
