@@ -18,6 +18,7 @@ protocol FlickerServiceProtocol {
 }
 
 final class FlickerService: FlickerServiceProtocol {
+    private var returnedPhotoIds = Set<String>()
     private let apiKey = "196791c930642bab389022402b9b7136"
 
     /// Fetches a photo for the given location.
@@ -50,7 +51,17 @@ final class FlickerService: FlickerServiceProtocol {
         let parser = PhotosParser()
 
         if let photosResponse = parser.parse(data: data) {
-            guard let photo = photosResponse.photos.randomElement() else { return nil }
+            var uniquePhoto: Photo?
+            repeat {
+                guard let photo = photosResponse.photos.randomElement() else { return nil }
+                if !returnedPhotoIds.contains(photo.id) {
+                    uniquePhoto = photo
+                    returnedPhotoIds.insert(photo.id)
+                }
+            } while uniquePhoto == nil
+
+            guard let photo = uniquePhoto else { return nil }
+
             return "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg"
         } else {
             print("Failed to parse XML")
