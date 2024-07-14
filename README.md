@@ -23,3 +23,6 @@ I figured that a coordinator would be helpful for the communication between the 
 
 # #5 Introduce Flicker Service
 So I got my personal API key from Flickr and presumably called the right API. The response is unfortunately XML, which I'll need to parse in the next step.
+
+# #6 Create custom XML parser for Flicker Response
+Unfortunately, the Flickr API response is XML, which requires a custom parser instead of JSON. This has cost me a bit more time. Now the image URL is constructed, and in the next step, I'll attempt to load those images in the ScrollView.
