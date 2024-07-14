@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Komoot_AssignmentApp: App {
+    @ObservedObject private var coordinator = Coordinator()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(coordinator: coordinator)
         }
     }
 }

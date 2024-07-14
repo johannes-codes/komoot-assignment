@@ -5,20 +5,57 @@
 //  Created by Meißner, Johannes on 14.07.24.
 //
 
+import CoreLocationUI
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var coordinator: Coordinator
     @State private var isTracking = false
+    @State private var showTrackingConsent = false
+    @State private var errorMessage: String = ""
+    @State private var hintMessage: String = ""
     @State private var photos: [String] = []
-    @ObservedObject private var coordinator = Coordinator()
+
+    init(coordinator: Coordinator) {
+        self.coordinator = coordinator
+    }
 
     var body: some View {
         VStack {
-            Button(isTracking ? "Stop" : "Start", action: startStopTracking)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .trailing)
+            HStack {
+                Button("Clear", action: clearResults)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .disabled(isTracking)
+                    .disabled(coordinator.photoStream.isEmpty)
+
+                Button(isTracking ? "Stop" : "Start", action: startStopTracking)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            .disabled(showTrackingConsent)
 
             ScrollView(showsIndicators: false) {
+                if !errorMessage.isEmpty {
+                    Text("\(Image(systemName: "exclamationmark.triangle.fill")) \(errorMessage)")
+                        .frame(maxWidth: .infinity)
+                        .font(.system(.footnote))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(.red.opacity(0.5))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                if !hintMessage.isEmpty {
+                    Text("\(Image(systemName: "info.circle")) \(hintMessage)")
+                        .frame(maxWidth: .infinity)
+                        .font(.system(.footnote))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(.gray.opacity(0.5))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
                 ForEach(coordinator.photoStream, id: \.self) { imageUrl in
                     AsyncImage(url: URL(string: imageUrl)) { phase in
                         if let image = phase.image {
@@ -52,8 +89,66 @@ struct ContentView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 16)
         }
+        .overlay {
+            if showTrackingConsent {
+                VStack(alignment: .center, spacing: 25) {
+                    Text("This app needs access to your permanent location to track your walk.")
+                        .font(.system(.callout))
+                        .multilineTextAlignment(.center)
+
+                    LocationButton(.shareCurrentLocation) {
+                        coordinator.requestAlwaysAuthorization()
+                    }
+                    .cornerRadius(20)
+                    .labelStyle(.titleAndIcon)
+                    .symbolVariant(.fill)
+                    .foregroundColor(Color.white)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.horizontal, 16)
+            }
+        }
+        .overlay {
+            if coordinator.photoStream.isEmpty, isTracking {
+                Text("Start walking...")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(.horizontal, 16)
+            }
+        }
+        .onChange(of: coordinator.locationAccess) { _, _ in
+            evaluateLocationConsent()
+        }
         .onAppear {
-            coordinator.requestLocationAccess()
+            evaluateLocationConsent()
+        }
+    }
+
+    private func evaluateLocationConsent() {
+        let access = coordinator.locationAccess
+        switch access {
+        case .authorizedWhenInUse:
+            set(hintMessage: "Your location is tracked only when the iPhone is unlocked and the app is open.")
+        case .denied, .restricted:
+            set(errorMessage: "Access to your location has been denied, so tracking is not possible.")
+        default:
+            resetMessages()
+        }
+
+        showTrackingConsent = access == .notDetermined
+    }
+
+    private func resetMessages() {
+        errorMessage = ""
+        hintMessage = ""
+    }
+
+    private func set(errorMessage: String? = nil, hintMessage: String? = nil) {
+        if let errorMessage {
+            self.errorMessage = errorMessage
+            self.hintMessage = ""
+        } else if let hintMessage {
+            self.hintMessage = hintMessage
+            self.errorMessage = ""
         }
     }
 
@@ -66,5 +161,9 @@ struct ContentView: View {
         }
 
         isTracking.toggle()
+    }
+
+    private func clearResults() {
+        coordinator.clearList()
     }
 }

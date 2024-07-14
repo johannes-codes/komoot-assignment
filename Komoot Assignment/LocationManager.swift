@@ -18,7 +18,7 @@ protocol LocationManagerProtocol {
     func startTracking()
     func stopTracking()
     func getLocationAccess() -> CLAuthorizationStatus
-    func requestLocationAccess()
+    func requestAlwaysAuthorization()
 }
 
 final class LocationManager: NSObject, LocationManagerProtocol {
@@ -47,7 +47,7 @@ final class LocationManager: NSObject, LocationManagerProtocol {
         locationManager.authorizationStatus
     }
 
-    func requestLocationAccess() {
+    func requestAlwaysAuthorization() {
         locationManager.requestAlwaysAuthorization()
     }
 }
@@ -71,5 +71,9 @@ extension LocationManager: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
         print(error)
+    }
+
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        delegate?.didUpdateAuthorization()
     }
 }

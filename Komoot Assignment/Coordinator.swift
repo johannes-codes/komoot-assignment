@@ -32,8 +32,12 @@ final class Coordinator: ObservableObject {
         locationManager.stopTracking()
     }
 
-    func requestLocationAccess() {
-        locationManager.requestLocationAccess()
+    func requestAlwaysAuthorization() {
+        locationManager.requestAlwaysAuthorization()
+    }
+
+    func clearList() {
+        photoStream.removeAll()
     }
 }
 

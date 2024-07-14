@@ -35,3 +35,6 @@ The image service occasionally returned duplicated images. Since the ScrollView 
 
 # #9 Register for Background activities
 Register the app so it can receive location updates in the background and is allowed to make network calls so that images get loaded while the phone is locked. According to the settings, images should load in the background - but it seems, looking at the network logs, that they load once the app is active again. I will work on that at the end once I'm done with everything else.
+
+# #10 Make some usability improvements
+I figured that I would like to add some usability improvements such as a user-initiated location access request. Also, showing the user the message that their location access might not be enough for background activities or that no access was granted. Also, a clear button is very handy - both for customers as well as me while testing 😄.
