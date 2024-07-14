@@ -17,3 +17,9 @@ which is why I disabled them from the beginning. For the first draft of the desi
 
 # #3 Introduce Location Manager
 The location manager holds the reference to the CLLocationManager and handles the beginning and end of tracking, as well as location access and state. The next step will be to calculate the distance between the updated locations and to send an event to the delegate once the threshold of 100 meters is passed.
+
+# #4 Create Coordinator
+I figured that a coordinator would be helpful for the communication between the location manager and the service that follows. The calculation for the distance was introduced, and for now, I've loaded the coordinates into the ScrollView to test UI and actual location update, both of which work.
+
+# #5 Introduce Flicker Service
+So I got my personal API key from Flickr and presumably called the right API. The response is unfortunately XML, which I'll need to parse in the next step.

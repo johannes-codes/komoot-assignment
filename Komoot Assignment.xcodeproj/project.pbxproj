@@ -16,6 +16,7 @@
 		B4E20ECC2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20ECB2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift */; };
 		B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */; };
 		B4E20EDB2C43F80700A8FC68 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EDA2C43F80700A8FC68 /* Coordinator.swift */; };
+		B4E20EDD2C43FB2000A8FC68 /* FlickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EDC2C43FB2000A8FC68 /* FlickerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B4E20ECB2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Komoot_AssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B4E20EDA2C43F80700A8FC68 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B4E20EDC2C43FB2000A8FC68 /* FlickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			children = (
 				B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */,
 				B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */,
-				B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */,
 				B4E20EDA2C43F80700A8FC68 /* Coordinator.swift */,
+				B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */,
+				B4E20EDC2C43FB2000A8FC68 /* FlickerService.swift */,
 				B4E20EB22C43EEDE00A8FC68 /* Assets.xcassets */,
 				B4E20EB42C43EEDE00A8FC68 /* Preview Content */,
 			);
@@ -265,6 +268,7 @@
 			files = (
 				B4E20EDB2C43F80700A8FC68 /* Coordinator.swift in Sources */,
 				B4E20EB12C43EEDC00A8FC68 /* ContentView.swift in Sources */,
+				B4E20EDD2C43FB2000A8FC68 /* FlickerService.swift in Sources */,
 				B4E20EAF2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift in Sources */,
 				B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */,
 			);

@@ -13,9 +13,14 @@ final class Coordinator: ObservableObject {
     @Published var locationAccess: CLAuthorizationStatus = .notDetermined
 
     private var locationManager: LocationManagerProtocol
+    private var flickerService: FlickerServiceProtocol
 
-    init(locationManager: LocationManagerProtocol = LocationManager()) {
+    init(
+        locationManager: LocationManagerProtocol = LocationManager(),
+        flickerService: FlickerServiceProtocol = FlickerService()
+    ) {
         self.locationManager = locationManager
+        self.flickerService = flickerService
         self.locationManager.delegate = self
     }
 
@@ -34,8 +39,15 @@ final class Coordinator: ObservableObject {
 
 extension Coordinator: LocationUpdateDelegate {
     func didUpdateLocation(_ location: CLLocation) {
-        DispatchQueue.main.async {
-            self.photoStream.insert(location.description, at: 0)
+        flickerService.fetchPhoto(for: location) { [weak self] result in
+            switch result {
+            case .success(let url):
+                DispatchQueue.main.async {
+                    self?.photoStream.insert(url, at: 0)
+                }
+            case .failure(let failure):
+                print(failure)
+            }
         }
     }
 
