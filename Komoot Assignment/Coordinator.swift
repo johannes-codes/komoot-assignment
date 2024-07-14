@@ -43,7 +43,9 @@ extension Coordinator: LocationUpdateDelegate {
             switch result {
             case .success(let url):
                 DispatchQueue.main.async {
-                    self?.photoStream.insert(url, at: 0)
+                    withAnimation {
+                        self?.photoStream.insert(url, at: 0)
+                    }
                 }
             case .failure(let failure):
                 print(failure)

@@ -26,3 +26,6 @@ So I got my personal API key from Flickr and presumably called the right API. Th
 
 # #6 Create custom XML parser for Flicker Response
 Unfortunately, the Flickr API response is XML, which requires a custom parser instead of JSON. This has cost me a bit more time. Now the image URL is constructed, and in the next step, I'll attempt to load those images in the ScrollView.
+
+# #7 Load images into ScrollView
+The images are now loading into the scroll view with the help of Apple's great AsyncImage. The handlers for loading and error state are very minimal but are the starting point for a potential improvement in the future. I also found that some images appear twice, which is a bug that needs addressing.
