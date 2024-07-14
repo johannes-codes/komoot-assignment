@@ -52,6 +52,7 @@
 		B4E20EDA2C43F80700A8FC68 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B4E20EDC2C43FB2000A8FC68 /* FlickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerService.swift; sourceTree = "<group>"; };
 		B4E20EDE2C4400FA00A8FC68 /* PhotosParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosParser.swift; sourceTree = "<group>"; };
+		B4E20EE02C440EAA00A8FC68 /* Komoot-Assignment-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Komoot-Assignment-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		B4E20EAD2C43EEDC00A8FC68 /* Komoot Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				B4E20EE02C440EAA00A8FC68 /* Komoot-Assignment-Info.plist */,
 				B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */,
 				B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */,
 				B4E20EDA2C43F80700A8FC68 /* Coordinator.swift */,
@@ -441,6 +443,7 @@
 				DEVELOPMENT_TEAM = FJ872ZVMR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Komoot-Assignment-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please grant access to your permanent location.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please grant access to your permanent location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -476,6 +479,7 @@
 				DEVELOPMENT_TEAM = FJ872ZVMR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Komoot-Assignment-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please grant access to your permanent location.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please grant access to your permanent location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

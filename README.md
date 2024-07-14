@@ -32,3 +32,6 @@ The images are now loading into the scroll view with the help of Apple's great A
 
 # #8 Fix the Flicker Service for unique photos
 The image service occasionally returned duplicated images. Since the ScrollView and for each operation relied on the image as an identifier, the duplicated images caused issues.
+
+# #9 Register for Background activities
+Register the app so it can receive location updates in the background and is allowed to make network calls so that images get loaded while the phone is locked. According to the settings, images should load in the background - but it seems, looking at the network logs, that they load once the app is active again. I will work on that at the end once I'm done with everything else.
