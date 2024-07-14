@@ -38,3 +38,6 @@ Register the app so it can receive location updates in the background and is all
 
 # #10 Make some usability improvements
 I figured that I would like to add some usability improvements such as a user-initiated location access request. Also, showing the user the message that their location access might not be enough for background activities or that no access was granted. Also, a clear button is very handy - both for customers as well as me while testing 😄.
+
+# Conclusion
+I'm not able to solve the background activity issue in time. Ideally, the network calls would continue even when the app is inactive. Besides that, I'm pretty happy with the result I achieved within the last 3.5 hours. Further improvements could be to split some code from the ContentView into a designated ViewModel and, of course, to write some tests. Most of the code is injectable with some mock variations of the class.
