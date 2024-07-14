@@ -2,7 +2,7 @@
 //  Komoot_AssignmentTests.swift
 //  Komoot AssignmentTests
 //
-//  Created by Meißner, Johannes, HSE DE on 14.07.24.
+//  Created by Meißner, Johannes on 14.07.24.
 //
 
 import XCTest

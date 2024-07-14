@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Komoot Assignment
 //
-//  Created by Meißner, Johannes, HSE DE on 14.07.24.
+//  Created by Meißner, Johannes on 14.07.24.
 //
 
 import SwiftUI
