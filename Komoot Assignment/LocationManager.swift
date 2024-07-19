@@ -9,7 +9,7 @@ import CoreLocation
 
 protocol LocationUpdateDelegate: AnyObject {
     func didUpdateLocation(_ location: CLLocation)
-    func didUpdateAuthorization()
+    func didUpdateAuthorization(with status: CLAuthorizationStatus)
 }
 
 protocol LocationManagerProtocol {
@@ -18,6 +18,7 @@ protocol LocationManagerProtocol {
     func startTracking()
     func stopTracking()
     func getLocationAccess() -> CLAuthorizationStatus
+    func requestWhenInUseAuthorization()
     func requestAlwaysAuthorization()
 }
 
@@ -47,6 +48,10 @@ final class LocationManager: NSObject, LocationManagerProtocol {
         locationManager.authorizationStatus
     }
 
+    func requestWhenInUseAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+
     func requestAlwaysAuthorization() {
         locationManager.requestAlwaysAuthorization()
     }
@@ -74,6 +79,6 @@ extension LocationManager: CLLocationManagerDelegate {
     }
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        delegate?.didUpdateAuthorization()
+        delegate?.didUpdateAuthorization(with: manager.authorizationStatus)
     }
 }

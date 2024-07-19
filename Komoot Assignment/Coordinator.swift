@@ -32,8 +32,8 @@ final class Coordinator: ObservableObject {
         locationManager.stopTracking()
     }
 
-    func requestAlwaysAuthorization() {
-        locationManager.requestAlwaysAuthorization()
+    func requestAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
     }
 
     func clearList() {
@@ -57,7 +57,13 @@ extension Coordinator: LocationUpdateDelegate {
         }
     }
 
-    func didUpdateAuthorization() {
-        locationAccess = locationManager.getLocationAccess()
+    func didUpdateAuthorization(with status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            locationManager.requestAlwaysAuthorization()
+        default: break
+        }
+
+        locationAccess = status
     }
 }

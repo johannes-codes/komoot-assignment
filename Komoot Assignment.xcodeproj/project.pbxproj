@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4DB948B2C4AF6BE00396518 /* ControlButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB948A2C4AF6BE00396518 /* ControlButtons.swift */; };
+		B4DB948D2C4AF6ED00396518 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB948C2C4AF6ED00396518 /* MessageView.swift */; };
+		B4DB948F2C4AF74500396518 /* PhotoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB948E2C4AF74500396518 /* PhotoStreamView.swift */; };
+		B4DB94912C4AF75900396518 /* TrackingConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB94902C4AF75900396518 /* TrackingConsentView.swift */; };
 		B4E20EAF2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */; };
 		B4E20EB12C43EEDC00A8FC68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */; };
 		B4E20EB32C43EEDE00A8FC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E20EB22C43EEDE00A8FC68 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4DB948A2C4AF6BE00396518 /* ControlButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtons.swift; sourceTree = "<group>"; };
+		B4DB948C2C4AF6ED00396518 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		B4DB948E2C4AF74500396518 /* PhotoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamView.swift; sourceTree = "<group>"; };
+		B4DB94902C4AF75900396518 /* TrackingConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingConsentView.swift; sourceTree = "<group>"; };
 		B4E20EAB2C43EEDC00A8FC68 /* Komoot Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Komoot Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Komoot_AssignmentApp.swift; sourceTree = "<group>"; };
 		B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +88,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4DB94892C4AF6A800396518 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */,
+				B4DB948A2C4AF6BE00396518 /* ControlButtons.swift */,
+				B4DB948C2C4AF6ED00396518 /* MessageView.swift */,
+				B4DB948E2C4AF74500396518 /* PhotoStreamView.swift */,
+				B4DB94902C4AF75900396518 /* TrackingConsentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B4E20EA22C43EEDC00A8FC68 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +124,7 @@
 			children = (
 				B4E20EE02C440EAA00A8FC68 /* Komoot-Assignment-Info.plist */,
 				B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */,
-				B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */,
+				B4DB94892C4AF6A800396518 /* Views */,
 				B4E20EDA2C43F80700A8FC68 /* Coordinator.swift */,
 				B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */,
 				B4E20EDC2C43FB2000A8FC68 /* FlickerService.swift */,
@@ -273,7 +293,11 @@
 			files = (
 				B4E20EDB2C43F80700A8FC68 /* Coordinator.swift in Sources */,
 				B4E20EB12C43EEDC00A8FC68 /* ContentView.swift in Sources */,
+				B4DB948B2C4AF6BE00396518 /* ControlButtons.swift in Sources */,
+				B4DB948F2C4AF74500396518 /* PhotoStreamView.swift in Sources */,
+				B4DB94912C4AF75900396518 /* TrackingConsentView.swift in Sources */,
 				B4E20EDF2C4400FA00A8FC68 /* PhotosParser.swift in Sources */,
+				B4DB948D2C4AF6ED00396518 /* MessageView.swift in Sources */,
 				B4E20EDD2C43FB2000A8FC68 /* FlickerService.swift in Sources */,
 				B4E20EAF2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift in Sources */,
 				B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */,
