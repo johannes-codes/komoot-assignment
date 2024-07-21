@@ -46,7 +46,7 @@ extension Coordinator: LocationUpdateDelegate {
         flickerService.fetchPhoto(for: location) { [weak self] result in
             switch result {
             case .success(let url):
-                DispatchQueue.main.async {
+                DispatchHandler.toMain {
                     withAnimation {
                         self?.photoStream.insert(url, at: 0)
                     }

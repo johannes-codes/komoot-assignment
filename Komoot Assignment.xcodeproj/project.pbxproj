@@ -11,11 +11,17 @@
 		B4DB948D2C4AF6ED00396518 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB948C2C4AF6ED00396518 /* MessageView.swift */; };
 		B4DB948F2C4AF74500396518 /* PhotoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB948E2C4AF74500396518 /* PhotoStreamView.swift */; };
 		B4DB94912C4AF75900396518 /* TrackingConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB94902C4AF75900396518 /* TrackingConsentView.swift */; };
+		B4DB94962C4B064F00396518 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB94952C4B064F00396518 /* CoordinatorTests.swift */; };
+		B4DB94992C4B0D3700396518 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB94982C4B0D3700396518 /* MockLocationManager.swift */; };
+		B4DB949B2C4D1D9300396518 /* MockFlickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB949A2C4D1D9300396518 /* MockFlickerService.swift */; };
+		B4DB949E2C4D205200396518 /* DispatchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB949D2C4D205200396518 /* DispatchHandler.swift */; };
+		B4DB94A02C4D22B800396518 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB949F2C4D22B800396518 /* MockCLLocationManager.swift */; };
+		B4DB94A22C4D23C100396518 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB94A12C4D23C100396518 /* LocationManagerTests.swift */; };
+		B4DB94A42C4D274700396518 /* MockLocationUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB94A32C4D274700396518 /* MockLocationUpdateDelegate.swift */; };
 		B4E20EAF2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */; };
 		B4E20EB12C43EEDC00A8FC68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */; };
 		B4E20EB32C43EEDE00A8FC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E20EB22C43EEDE00A8FC68 /* Assets.xcassets */; };
 		B4E20EB62C43EEDE00A8FC68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E20EB52C43EEDE00A8FC68 /* Preview Assets.xcassets */; };
-		B4E20EC02C43EEDF00A8FC68 /* Komoot_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EBF2C43EEDF00A8FC68 /* Komoot_AssignmentTests.swift */; };
 		B4E20ECA2C43EEDF00A8FC68 /* Komoot_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20EC92C43EEDF00A8FC68 /* Komoot_AssignmentUITests.swift */; };
 		B4E20ECC2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20ECB2C43EEDF00A8FC68 /* Komoot_AssignmentUITestsLaunchTests.swift */; };
 		B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E20ED82C43F3C400A8FC68 /* LocationManager.swift */; };
@@ -46,6 +52,13 @@
 		B4DB948C2C4AF6ED00396518 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B4DB948E2C4AF74500396518 /* PhotoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamView.swift; sourceTree = "<group>"; };
 		B4DB94902C4AF75900396518 /* TrackingConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingConsentView.swift; sourceTree = "<group>"; };
+		B4DB94952C4B064F00396518 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		B4DB94982C4B0D3700396518 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
+		B4DB949A2C4D1D9300396518 /* MockFlickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlickerService.swift; sourceTree = "<group>"; };
+		B4DB949D2C4D205200396518 /* DispatchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHandler.swift; sourceTree = "<group>"; };
+		B4DB949F2C4D22B800396518 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
+		B4DB94A12C4D23C100396518 /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
+		B4DB94A32C4D274700396518 /* MockLocationUpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationUpdateDelegate.swift; sourceTree = "<group>"; };
 		B4E20EAB2C43EEDC00A8FC68 /* Komoot Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Komoot Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Komoot_AssignmentApp.swift; sourceTree = "<group>"; };
 		B4E20EB02C43EEDC00A8FC68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,10 +113,40 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B4DB94942C4B05F800396518 /* Komoot Assignment Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B4DB94952C4B064F00396518 /* CoordinatorTests.swift */,
+				B4DB94A12C4D23C100396518 /* LocationManagerTests.swift */,
+				B4DB94972C4B0D2200396518 /* Mocks */,
+			);
+			path = "Komoot Assignment Tests";
+			sourceTree = "<group>";
+		};
+		B4DB94972C4B0D2200396518 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B4DB94982C4B0D3700396518 /* MockLocationManager.swift */,
+				B4DB949A2C4D1D9300396518 /* MockFlickerService.swift */,
+				B4DB949F2C4D22B800396518 /* MockCLLocationManager.swift */,
+				B4DB94A32C4D274700396518 /* MockLocationUpdateDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B4DB949C2C4D204600396518 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B4DB949D2C4D205200396518 /* DispatchHandler.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		B4E20EA22C43EEDC00A8FC68 = {
 			isa = PBXGroup;
 			children = (
 				B4E20EAD2C43EEDC00A8FC68 /* Komoot Assignment */,
+				B4DB94942C4B05F800396518 /* Komoot Assignment Tests */,
 				B4E20EC82C43EEDF00A8FC68 /* Komoot AssignmentUITests */,
 				B4E20EAC2C43EEDC00A8FC68 /* Products */,
 			);
@@ -122,6 +165,7 @@
 		B4E20EAD2C43EEDC00A8FC68 /* Komoot Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				B4DB949C2C4D204600396518 /* Util */,
 				B4E20EE02C440EAA00A8FC68 /* Komoot-Assignment-Info.plist */,
 				B4E20EAE2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift */,
 				B4DB94892C4AF6A800396518 /* Views */,
@@ -294,12 +338,17 @@
 				B4E20EDB2C43F80700A8FC68 /* Coordinator.swift in Sources */,
 				B4E20EB12C43EEDC00A8FC68 /* ContentView.swift in Sources */,
 				B4DB948B2C4AF6BE00396518 /* ControlButtons.swift in Sources */,
+				B4DB94A02C4D22B800396518 /* MockCLLocationManager.swift in Sources */,
 				B4DB948F2C4AF74500396518 /* PhotoStreamView.swift in Sources */,
 				B4DB94912C4AF75900396518 /* TrackingConsentView.swift in Sources */,
 				B4E20EDF2C4400FA00A8FC68 /* PhotosParser.swift in Sources */,
 				B4DB948D2C4AF6ED00396518 /* MessageView.swift in Sources */,
 				B4E20EDD2C43FB2000A8FC68 /* FlickerService.swift in Sources */,
+				B4DB94992C4B0D3700396518 /* MockLocationManager.swift in Sources */,
 				B4E20EAF2C43EEDC00A8FC68 /* Komoot_AssignmentApp.swift in Sources */,
+				B4DB949E2C4D205200396518 /* DispatchHandler.swift in Sources */,
+				B4DB949B2C4D1D9300396518 /* MockFlickerService.swift in Sources */,
+				B4DB94A42C4D274700396518 /* MockLocationUpdateDelegate.swift in Sources */,
 				B4E20ED92C43F3C400A8FC68 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +357,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E20EC02C43EEDF00A8FC68 /* Komoot_AssignmentTests.swift in Sources */,
+				B4DB94A22C4D23C100396518 /* LocationManagerTests.swift in Sources */,
+				B4DB94962C4B064F00396518 /* CoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,9 +591,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.johannes.Komoot-AssignmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Komoot Assignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Komoot Assignment";
 			};
 			name = Debug;
@@ -561,9 +615,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.johannes.Komoot-AssignmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Komoot Assignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Komoot Assignment";
 			};
 			name = Release;
@@ -579,9 +637,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.johannes.Komoot-AssignmentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Komoot Assignment";
 			};
 			name = Debug;
@@ -597,9 +659,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.johannes.Komoot-AssignmentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Komoot Assignment";
 			};
 			name = Release;
